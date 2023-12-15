@@ -5,11 +5,29 @@ on:
     branches: [ main ]
 
 jobs:
-  print-hello:
+  standard-checks:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: hadolint/hadolint-action@v3.1.0
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Linter for Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: Dockerfile
-      - run: echo "Hello World!"
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            deriv/app
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=ref,event=tag
+      - name: Build
+        uses: docker/build-push-action@v5
+        with:
+          push: false
+          tags: ${{ steps.meta.outputs.tags }}
