@@ -1,4 +1,5 @@
-FROM debian
+FROM debian:buster
 
-# emits an info and a warning level violation.
-RUN apt-get install foo
+# info level warning expected here:
+RUN echo "Hello"
+RUN echo "World"
