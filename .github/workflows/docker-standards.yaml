@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Check and Docker Image
+      - name: Check and build docker Image
         uses: suyash-deriv/dockerfile-action@v0.2
         with:
           images: |
             deriv/app
+            deriv/sample-app
