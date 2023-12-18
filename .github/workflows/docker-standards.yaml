@@ -11,8 +11,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check and build docker Image
-        uses: suyash-deriv/dockerfile-action@v0.2
+        uses: suyash-deriv/dockerfile-action@v0.3
         with:
           images: |
             deriv/app
             deriv/sample-app
+          push: true
+          username: ${{ env.DOCKER_USERNAME }}
+          password: ${{ env.DOCKER_password }}
