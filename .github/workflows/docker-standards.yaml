@@ -11,4 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check and Docker Image
-        uses: suyash-deriv/dockerfile-action@v0.1
+        uses: suyash-deriv/dockerfile-action@v0.2
+        with:
+          images: |
+            deriv/app
