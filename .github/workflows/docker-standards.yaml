@@ -14,8 +14,7 @@ jobs:
         uses: suyash-deriv/dockerfile-action@0.3
         with:
           images: |
-            deriv/app
-            deriv/sample-app
+            suyashderiv/sample-app
           push: true
           username: ${{ env.DOCKER_USERNAME }}
           password: ${{ env.DOCKER_password }}
