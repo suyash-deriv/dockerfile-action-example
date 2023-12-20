@@ -15,5 +15,7 @@ jobs:
         with:
           images: suyashderiv/sample-app
           push: true
+          dockerfile: './nodetest/Dockerfile.dev'
+          context: './nodetest'
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_password }}
