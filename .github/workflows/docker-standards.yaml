@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check and build docker Image
-        uses: suyash-deriv/dockerfile-action@main
+        uses: suyash-deriv/dockerfile-action@suyash
         with:
           images: suyashderiv/sample-app
           push: true
