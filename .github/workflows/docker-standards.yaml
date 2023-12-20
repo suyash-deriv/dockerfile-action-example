@@ -19,4 +19,3 @@ jobs:
           context: './nodetest'
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_password }}
-          project_type: 'node'
