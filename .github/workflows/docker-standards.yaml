@@ -2,7 +2,7 @@ name: Dockerfile Standard Checks
 
 on:
   push:
-    branches: [ suyash ]
+    branches: [ node ]
 
 jobs:
   standard-checks:
@@ -13,7 +13,7 @@ jobs:
       - name: Check and build docker Image
         uses: suyash-deriv/dockerfile-action@suyash
         with:
-          images: suyashderiv/sample-app
+          images: suyashderiv/sample-node-app
           push: true
           dockerfile: './nodetest/Dockerfile.dev'
           context: './nodetest'
