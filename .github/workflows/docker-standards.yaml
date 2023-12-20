@@ -14,8 +14,4 @@ jobs:
         uses: suyash-deriv/dockerfile-action@main
         with:
           images: suyashderiv/sample-app
-          push: false
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_password }}
-          project_type: go
-
+          project_type: skip
