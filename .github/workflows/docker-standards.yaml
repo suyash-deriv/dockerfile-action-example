@@ -2,7 +2,7 @@ name: Dockerfile Standard Checks
 
 on:
   push:
-    branches: [ main ]
+    branches: [ suyash ]
 
 jobs:
   standard-checks:
