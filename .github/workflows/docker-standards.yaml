@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        
       - name: Check and build docker Image
         uses: deriv-iac/shared-actions/.github/workflows/deriv-ci.yml@master
         with:
