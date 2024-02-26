@@ -6,6 +6,6 @@ jobs:
   build:
     uses: deriv-iac/shared-actions/.github/workflows/deriv-ci.yml@master
     with:
-      images: suyashderiv/sample-app
+      images: jothimanideriv/ghaction-poc
       project_type: skip
       dockerfile: "./Dockerfile"
