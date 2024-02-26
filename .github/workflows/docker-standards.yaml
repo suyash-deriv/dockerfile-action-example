@@ -9,4 +9,3 @@ jobs:
       images: suyashderiv/sample-app
       project_type: skip
       dockerfile: "./Dockerfile"
-
