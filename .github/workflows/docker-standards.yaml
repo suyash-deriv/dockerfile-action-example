@@ -6,10 +6,14 @@ on:
   
 
 jobs:
-  standard-checks:  
-    name: Check and build docker Image
-    uses: deriv-iac/shared-actions/.github/workflows/deriv-ci.yml@master
-    with:
-      images: suyashderiv/sample-app
-      project_type: skip
-      dockerfile: "./Dockerfile"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Check and build docker Image
+        uses: deriv-iac/shared-actions/.github/workflows/deriv-ci.yml@master
+        with:
+          images: suyashderiv/sample-app
+          project_type: skip
+          dockerfile: "./Dockerfile"
