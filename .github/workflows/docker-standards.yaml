@@ -7,11 +7,8 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:        
-      - name: Check and build docker Image
-        uses: deriv-iac/shared-actions/.github/workflows/deriv-ci.yml@master
-        with:
-          images: suyashderiv/sample-app
-          project_type: skip
-          dockerfile: "./Dockerfile"
+    uses: deriv-iac/shared-actions/.github/workflows/deriv-ci.yml@master
+    with:
+      images: suyashderiv/sample-app
+      project_type: skip
+      dockerfile: "./Dockerfile"
