@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check and build docker Image
-        uses: deriv-iac/shared-actions/deriv-ci.yml@main
+        uses: deriv-iac/shared-actions/deriv-ci.yml@master
         with:
           images: suyashderiv/sample-app
           project_type: skip
